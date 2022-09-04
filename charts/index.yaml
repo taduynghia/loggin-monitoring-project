@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  ChartApp:
+  - apiVersion: v1
+    appVersion: 1.1.0
+    created: "2022-08-27T10:55:52.888825+07:00"
+    description: Helm Project
+    digest: 63c3b7af1da50a6e50b0849ec3fe21b315987f430cebc6eca4a5a6fe83c075b2
+    name: ChartApp
+    type: application
+    urls:
+    - ChartApp-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-08-27T10:55:52.86289+07:00"

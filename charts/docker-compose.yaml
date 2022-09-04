@@ -1,0 +1,26 @@
+version: '3'
+networks:
+  chat:
+volumes:
+  db:
+
+services:
+  chat-app:
+    build: .
+    image: "chat-app"
+    container_name: "chat-app"
+    ports:
+      - "8001:5000"
+    networks:
+      - chat
+  db:
+    image: mysql
+    container_name: "db_container"
+    volumes:
+     - "db:/var/lib/mysql"
+     - "./db:/docker-entrypoint-initdb.d"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=chat
+    networks:
+      - chat
